@@ -7,4 +7,5 @@ for _ in range(n):
     for _ in range(pessoas):
         idiomas.append(input())
 
-    
+
+
