@@ -6,8 +6,8 @@ while True:
             print("Senha invalida.")
             continue
 
-        len = senha.len()
-        if len < 6 or len > 32:
+        teste =   len(senha)
+        if teste < 6 or teste > 32:
             print("Senha invalida.")
             continue
 
@@ -15,11 +15,21 @@ while True:
         maiuscula = False
         numero = False
 
-        minusculas = []...
+        
         
         for simb in senha:
-            if simb in minusculas:
-                ...
+            if simb.islower() and simb.isalpha():
+                minuscula = True;
+            if simb.isupper() and simb.isalpha():
+                maiuscula = True;
+            if simb.isnumeric():
+                numero = True;
+
+        if(numero and maiuscula and minuscula): print("Senha valida.")
+        else: print("Senha invalida.")
+
+
+
 
     except EOFError:
         break
